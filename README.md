@@ -13,18 +13,16 @@ For the last complete month (July 2026), the answer depends materially on defini
 | Strict post-target cash / targeted account | +13.1% |
 | DPD-standardised strict post-target cash / targeted account | +12.7% |
 
-Therefore, a generic claim of “11% recovery improvement” is not independently verifiable without its metric definition and attribution rules. See `reports/executive_memo.md` for the decision recommendation and `reports/data_quality_report.md` for the evidence.
+Therefore, a generic claim of “11% recovery improvement” is not independently verifiable without its metric definition and attribution rules.
 
 ## Repository map
 
 ```text
 data/raw/                 Supplied source files (unchanged; ignored from source control)
 data/golden/              Reproducible analytical tables created by the pipeline
-src/build_analysis.py     Cleaning, payment reconciliation and metric pipeline
 sql/                      Equivalent production-oriented SQL transformations
 notebooks/analysis.ipynb  Walkthrough notebook
-outputs/                  Auditable monthly, segment and quality result tables
-dashboard/index.html      One-screen executive dashboard
+outputs/                  Auditable monthly, segment and quality result tables, One-screen executive dashboard
 reports/                  Executive memo, data-quality report and architecture
 ```
 
