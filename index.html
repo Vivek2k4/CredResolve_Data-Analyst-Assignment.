@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Collections Recovery | Executive View</title>
+  <style>
+    :root { --ink:#14213d; --muted:#5e6b80; --line:#dde4ee; --good:#087e5b; --warn:#b45309; --bad:#b42318; --bg:#f5f7fb; --card:#fff; }
+    * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,Segoe UI,Arial,sans-serif; }
+    main { width:min(1220px,calc(100% - 40px)); margin:26px auto 36px; } h1 { margin:0 0 6px; font-size:28px; letter-spacing:-.5px; } h2 { margin:0 0 14px; font-size:17px; } p { margin:0; line-height:1.45; } .sub { color:var(--muted); } .banner { margin:20px 0; padding:14px 17px; border-left:5px solid var(--warn); border-radius:8px; background:#fff7ed; font-weight:600; }
+    .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; } .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:17px; box-shadow:0 1px 2px #13213d08; } .label { color:var(--muted); font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; } .value { margin:7px 0 5px; font-size:27px; font-weight:750; letter-spacing:-.6px; } .green { color:var(--good); } .orange { color:var(--warn); } .red { color:var(--bad); } .small { color:var(--muted); font-size:13px; }
+    .layout { display:grid; grid-template-columns:1.35fr .9fr; gap:14px; margin-top:14px; } .bars { display:flex; height:190px; align-items:end; gap:17px; padding:7px 4px 0; border-bottom:1px solid var(--line); } .bar-unit { flex:1; min-width:0; text-align:center; } .bar { min-height:5px; width:100%; border-radius:5px 5px 0 0; background:#315ba7; } .bar-unit.latest .bar { background:#087e5b; } .amount { font-size:11px; color:var(--muted); margin:0 0 4px; white-space:nowrap; } .month { font-size:12px; color:var(--muted); margin-top:7px; }
+    table { border-collapse:collapse; width:100%; font-size:13px; } th { color:var(--muted); text-align:left; font-size:11px; letter-spacing:.05em; text-transform:uppercase; } td, th { border-bottom:1px solid var(--line); padding:10px 7px; } td:last-child, th:last-child { text-align:right; } .decision { margin-top:14px; background:#14213d; color:#fff; padding:20px; border-radius:12px; } .decision strong { color:#a7f3d0; } ul { padding-left:19px; margin:8px 0 0; line-height:1.55; } @media(max-width:850px){.grid,.layout{grid-template-columns:1fr 1fr}.layout{grid-template-columns:1fr}.card{min-width:0}} @media(max-width:540px){main{width:min(100% - 26px,1220px)}.grid{grid-template-columns:1fr 1fr}.value{font-size:23px}.bars{gap:8px}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Collections recovery: what actually happened?</h1>
+    <p class="sub">Last complete month: July 2026 · Strict, payment-reference-deduplicated, post-target cohort definition</p>
+  </header>
+
+  <div class="banner">Decision signal: do not accept an “11% improvement” headline until recovery definition, payment deduplication and attribution rules are explicitly shown.</div>
+
+  <section class="grid" aria-label="Key performance indicators">
+    <article class="card"><div class="label">Strict recovery / target</div><div class="value green">₹2,513</div><div class="small">July · <span class="green">+13.1%</span> vs June</div></article>
+    <article class="card"><div class="label">DPD-standardised change</div><div class="value green">+12.7%</div><div class="small">July vs June · mix-adjusted</div></article>
+    <article class="card"><div class="label">Clean all-cash / target</div><div class="value red">-3.3%</div><div class="small">July vs June · different valid definition</div></article>
+    <article class="card"><div class="label">Payment cash removed</div><div class="value orange">₹5.16 Cr</div><div class="small">July duplicate/replayed reference impact</div></article>
+  </section>
+
+  <section class="layout">
+    <article class="card">
+      <h2>Strict post-target recovery per targeted account</h2>
+      <p class="small">Cash received after first target in the same month. August excluded: data ends 8 Aug.</p>
+      <div class="bars" aria-label="Monthly recovery trend">
+        <div class="bar-unit"><div class="amount">₹3,209</div><div class="bar" style="height:100%"></div><div class="month">Jan</div></div>
+        <div class="bar-unit"><div class="amount">₹2,737</div><div class="bar" style="height:85%"></div><div class="month">Feb</div></div>
+        <div class="bar-unit"><div class="amount">₹3,210</div><div class="bar" style="height:100%"></div><div class="month">Mar</div></div>
+        <div class="bar-unit"><div class="amount">₹2,532</div><div class="bar" style="height:79%"></div><div class="month">Apr</div></div>
+        <div class="bar-unit"><div class="amount">₹2,672</div><div class="bar" style="height:83%"></div><div class="month">May</div></div>
+        <div class="bar-unit"><div class="amount">₹2,221</div><div class="bar" style="height:69%"></div><div class="month">Jun</div></div>
+        <div class="bar-unit latest"><div class="amount">₹2,513</div><div class="bar" style="height:78%"></div><div class="month">Jul</div></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2>Why the headline is unsafe</h2>
+      <table><thead><tr><th>Definition</th><th>Jul vs Jun</th></tr></thead><tbody>
+        <tr><td>Raw successful cash / target</td><td class="green">+4.0%</td></tr>
+        <tr><td>Deduplicated cash / target</td><td class="red">-3.3%</td></tr>
+        <tr><td>Strict post-target cash / target</td><td class="green">+13.1%</td></tr>
+        <tr><td>Strict + DPD standardisation</td><td class="green">+12.7%</td></tr>
+      </tbody></table>
+      <p class="small" style="margin-top:12px">The strict metric is preferred for operating cohorts. It does not prove that targeting caused payment.</p>
+    </article>
+  </section>
+
+  <section class="layout">
+    <article class="card">
+      <h2>Data risks blocking a causal investment decision</h2>
+      <ul>
+        <li>4,297 payment rows removed by cleaning; 382 payment references missing.</li>
+        <li>1,271 duplicate call rows; 38,272 calls outside normal hours before timezone normalisation.</li>
+        <li>1,000 agent IDs map to an unstable employee-code master.</li>
+        <li>No historical monthly balance, channel-cost ledger, or randomised campaign control group.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h2>Operational signals, July</h2>
+      <table><tbody>
+        <tr><td>Targeted accounts</td><td>5,666</td></tr>
+        <tr><td>Payment conversion</td><td>3.35%</td></tr>
+        <tr><td>Answered-call rate</td><td>19.3%</td></tr>
+        <tr><td>PTP kept rate</td><td>32.7%</td></tr>
+        <tr><td>0-30 DPD mix</td><td>44.7%</td></tr>
+      </tbody></table>
+    </article>
+  </section>
+
+  <section class="decision">
+    <h2>Recommended next move: better borrower targeting, but as a controlled pilot</h2>
+    <p>A ₹10 Cr commitment needs a <strong>54.6% gross recovery uplift</strong> to break even against the annualised strict-recovery run-rate. Run a 90-day randomised targeting test first; scale only if incremental recovery and complaints meet a pre-registered threshold.</p>
+  </section>
+</main>
+</body>
+</html>
